@@ -19,9 +19,13 @@ export default function Home() {
       <ul>
         {dinosaurs.map((dinosaur) => {
           return (
-            <li key={dinosaur.id}>
-              {dinosaur.name}
-              <Link href={`/species/${dinosaur.id}`}>Details</Link>
+            <li className="list" key={dinosaur.id}>
+              <p>
+                {dinosaur.name}
+                <button>
+                  <Link href={`/species/${dinosaur.id}`}>Details</Link>
+                </button>
+              </p>
             </li>
           );
         })}
