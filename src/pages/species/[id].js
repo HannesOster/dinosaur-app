@@ -1,5 +1,5 @@
 import { dinosaurs } from "../../utils/dinosaurs";
-import useRouter from "next/router";
+import { useRouter } from "next/router";
 
 export default function Species() {
   const router = useRouter();
@@ -11,7 +11,7 @@ export default function Species() {
     <div>
       <h1>{name}</h1>
       <p>{description}</p>
-      <p>Size : {size}</p>
+      <p>Size : {size}m</p>
       <label>
         Carnivore
         <input type="checkbox" checked={carnivore} />
